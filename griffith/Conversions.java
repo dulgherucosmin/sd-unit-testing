@@ -54,7 +54,8 @@ public class Conversions {
     }
 
     public String integerToString(int val) {
-        return "";
+        // parse value of the integer to the string
+        return String.valueOf(val);
     }
 
     public String switchCase(String val) {

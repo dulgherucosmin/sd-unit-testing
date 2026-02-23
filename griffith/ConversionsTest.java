@@ -25,4 +25,20 @@ public class ConversionsTest {
         assertEquals(0, converter.euroToDollar(0), 1e-6);
         assertEquals(0, converter.euroToDollar(0), 1e-6);
     }
+
+    @Test
+    public void dollarToEuroTest() {
+        // positive tests
+        assertEquals(8.5, converter.dollarToEuro(10), 1e-6);
+        assertEquals(25.4, converter.dollarToEuro(30), 1e-6);
+        assertEquals(85.0, converter.dollarToEuro(100), 1e-6);
+
+        // negative tests
+        assertEquals(-1.0, converter.euroToDollar(-5), 1e-6);
+        assertEquals(-1.0, converter.euroToDollar(-10), 1e-6);
+        assertEquals(-1.0, converter.euroToDollar(-25), 1e-6);
+
+        // 0 tests
+        assertEquals(0, converter.euroToDollar(-25), 1e-6);
+    }
 }

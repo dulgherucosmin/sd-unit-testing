@@ -79,4 +79,22 @@ public class ConversionsTest {
         assertEquals("0", converter.integerToString(0));
     }
 
+    @Test
+    public void switchCaseTest() {
+        // test 1
+        String test1 = "testWORD";
+        Conversions conv1 = new Conversions(test1);
+        assertEquals("TESTword", conv1.switchCase());
+
+        // test 2
+        String test2 = "aA";
+        Conversions conv2 = new Conversions(test2);
+        assertEquals("Aa", conv2.switchCase());
+
+        // test 3
+        String test3 = "switchCASEtesting";
+        Conversions conv3 = new Conversions(test3);
+        assertEquals("SWITCHcaseTESTING", conv3.switchCase());
+
+    }
 }

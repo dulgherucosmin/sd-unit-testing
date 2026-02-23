@@ -5,6 +5,16 @@ public class Conversions {
 
     private final double EURO_TO_DOLLAR = 1.18;
     private final double DOLLAR_TO_EURO = 0.85;
+    private String word;
+
+    // empty constructor for most methods
+    public Conversions() {}
+
+    // implemented constructor for 'switchCase'
+    public Conversions(String word) {
+        this.word = word;
+    }
+
 
     public double euroToDollar(double euro) {
         // negative values always fail
@@ -58,7 +68,7 @@ public class Conversions {
         return String.valueOf(val);
     }
 
-    public String switchCase(String val) {
+    public String switchCase() {
         return "";
     }
 }

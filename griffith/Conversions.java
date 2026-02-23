@@ -39,7 +39,18 @@ public class Conversions {
     }
 
     public int stringToInteger(String val) {
-        return 0;
+
+        // string value cannot be null
+        if (val == null) {
+            throw new IllegalArgumentException();
+        }
+
+        try {
+            return Integer.parseInt(val);
+        // string is not a valid integer
+        } catch (NumberFormatException e) {
+            return 0; 
+        }
     }
 
     public String integerToString(int val) {

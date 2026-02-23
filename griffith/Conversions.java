@@ -12,6 +12,12 @@ public class Conversions {
 
     // implemented constructor for 'switchCase'
     public Conversions(String word) {
+        
+        // word cannot be null
+        if (word == null) {
+            throw new IllegalArgumentException();
+        }
+
         this.word = word;
     }
 
@@ -69,6 +75,24 @@ public class Conversions {
     }
 
     public String switchCase() {
-        return "";
+
+        StringBuilder sb = new StringBuilder();
+
+        // loop through characters
+        for (char c: this.word.toCharArray()) {
+
+            if (Character.isLowerCase(c)) {
+                // if character is lowercase, invert casing and append to stringbuilder
+                sb.append(Character.toUpperCase(c));
+            
+            } else if (Character.isUpperCase(c)) {
+                // if character is lowercase, invert casing and append to stringbuilder
+                sb.append(Character.toLowerCase(c));
+            } else {
+                // for spaces 
+                sb.append(c);
+            }
+        }
+        return sb.toString();
     }
 }

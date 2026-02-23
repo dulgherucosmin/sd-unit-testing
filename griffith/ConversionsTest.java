@@ -96,6 +96,11 @@ public class ConversionsTest {
         Conversions conv3 = new Conversions(test3);
         assertEquals("SWITCHcaseTESTING", conv3.switchCase());
 
+        // test 4
+        String test4 = "test SPACES";
+        Conversions conv4 = new Conversions(test4);
+        assertEquals("TEST spaces", conv4.switchCase());
+
     }
 
     @Test(expected=IllegalArgumentException.class)

@@ -97,4 +97,9 @@ public class ConversionsTest {
         assertEquals("SWITCHcaseTESTING", conv3.switchCase());
 
     }
+
+    @Test(expected=IllegalArgumentException.class)
+    public void switchCaseTestNull() {
+        assertNull(new Conversions(null));
+    }
 }

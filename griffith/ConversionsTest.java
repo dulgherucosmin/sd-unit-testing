@@ -62,4 +62,21 @@ public class ConversionsTest {
     public void stringToIntegerTestNull() {
         assertNull(converter.stringToInteger(null));
     }
+
+    @Test
+    public void integerToStringTest() {
+        // positive tests
+        assertEquals("10", converter.integerToString(10));
+        assertEquals("250", converter.integerToString(250));
+        assertEquals("10000", converter.integerToString(10000));
+
+        // negative tests
+        assertEquals("-10", converter.integerToString(-10));
+        assertEquals("-250", converter.integerToString(-250));
+        assertEquals("-10000", converter.integerToString(-10000));
+
+        // 0 test
+        assertEquals("0", converter.integerToString(0));
+    }
+
 }

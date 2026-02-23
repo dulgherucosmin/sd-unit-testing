@@ -41,4 +41,25 @@ public class ConversionsTest {
         // 0 tests
         assertEquals(0, converter.euroToDollar(0), 1e-6);
     }
+
+    @Test
+    public void stringToIntegerTest() {
+        // positive tests
+        assertEquals(5, converter.stringToInteger("5"));
+        assertEquals(20, converter.stringToInteger("20"));
+        assertEquals(1000, converter.stringToInteger("1000"));
+
+        // negative tests
+        assertEquals(-5, converter.stringToInteger("-5"));
+        assertEquals(-20, converter.stringToInteger("-20"));
+        assertEquals(-1000, converter.stringToInteger("-1000"));
+
+        // 0 test
+        assertEquals(0, converter.stringToInteger("0"));
+    }
+
+    @Test(expected=IllegalArgumentException.class)
+    public void stringToIntegerTestNull() {
+        assertNull(converter.stringToInteger(null));
+    }
 }

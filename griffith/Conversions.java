@@ -4,7 +4,19 @@ package griffith;
 public class Conversions {
 
     public double euroToDollar(double euro) {
-        return 0.0;
+        // negative values always fail
+        if (euro < 0.0) { 
+            return -1.0; 
+ 
+        // 0 will always be converted to 0
+        } else if (euro == 0.0) { 
+            return 0.0;
+
+        // default functionality
+        } else {
+            // return to 2 dp
+            return Math.round(euro * 1.18 * 100.00) / 100.00;
+        }
     }
 
     public double dollarToEuro(double dollar) {

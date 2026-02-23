@@ -4,7 +4,7 @@ package griffith;
 public class Conversions {
 
     public double euroToDollar(double euro) {
-        return 0.0;
+        return 0.0; 
     }
 
     public double dollarToEuro(double dollar) {

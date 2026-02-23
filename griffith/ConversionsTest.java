@@ -26,7 +26,7 @@ public class ConversionsTest {
         assertEquals(0, converter.euroToDollar(50), 1e-6);
     }
 
-    @Test
+    @Test(expected=IllegalArgumentException.class)
     public void euroToDollarNullTest() {
         assertNull(converter.euroToDollar((Double) null));
     }
